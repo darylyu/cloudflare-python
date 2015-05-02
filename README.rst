@@ -13,7 +13,7 @@ THIS PROJECT IS STILL IN ITS PLANNING STAGE!
 cloudflare-python provides a CLI and Python wrappers for CloudFlare's API.
 
 * Free software: BSD license
-* Documentation: https://cloudflare.readthedocs.org.
+* Documentation: https://cloudflare-python.readthedocs.org.
 
 Configuration
 -------------
