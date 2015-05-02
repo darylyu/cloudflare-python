@@ -22,7 +22,7 @@ Features
 Usage
 -----
 
-    According to CloudFlare's official API documentation, a `zone` is a domain name along with its subdomains and other identities.
+According to CloudFlare's official API documentation, a `zone` is a domain name along with its subdomains and other identities.
 
   .. code-block:: bash
 
