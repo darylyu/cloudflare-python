@@ -8,8 +8,9 @@ CloudFlare - Python Wrappers
 .. image:: https://img.shields.io/pypi/v/cloudflare.svg
         :target: https://pypi.python.org/pypi/cloudflare
 
+THIS PROJECT IS STILL IN ITS PLANNING STAGE!
 
-STILL UNDER DEVELOPMENT! It'll provide a CLI and Python wrappers for CloudFlare's REST API
+cloudflare-python provides a CLI and Python wrappers for CloudFlare's API.
 
 * Free software: BSD license
 * Documentation: https://cloudflare.readthedocs.org.
