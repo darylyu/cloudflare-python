@@ -40,8 +40,14 @@ According to CloudFlare's official API documentation, a `zone` is a domain name 
     # Add a site to your CloudFlare account:
     $ cloudflare zone create example.com
 
-    # List the DNS entries for a site
-    $ cloudflare dns list example.com
+    # Show the basic info for a site tied to your CloudFlare account.
+    $ cloudflare zone show example.com
+
+    # List the sites tied to your CloudFlare account.
+    $ cloudflare zone list
+
+    # Show the DNS entries for a site
+    $ cloudflare dns show example.com
 
     # Create a DNS entry for a site
     $ cloudflare dns create subdomain.example.com 1.2.3.4 --type=A
