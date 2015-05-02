@@ -1,5 +1,5 @@
 ===============================
-CloudFlare - Python Wrappers
+cloudflare-python
 ===============================
 
 .. image:: https://img.shields.io/travis/darylyu/cloudflare.svg
