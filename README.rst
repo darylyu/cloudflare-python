@@ -15,11 +15,6 @@ cloudflare-python provides a CLI and Python wrappers for CloudFlare's API.
 * Free software: BSD license
 * Documentation: https://cloudflare.readthedocs.org.
 
-Features
---------
-
-* TODO
-
 Configuration
 -------------
 Create a file named .cloudflare.conf in your home directory. The first line is your API key. The second line is the email address tied to your CloudFlare account.
