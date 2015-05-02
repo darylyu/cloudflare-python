@@ -35,6 +35,7 @@ setup(
     ],
     package_dir={'cloudflare':
                  'cloudflare'},
+    entry_points={'console_scripts': ['cloudflare = cloudflare.cli.main']},
     include_package_data=True,
     install_requires=requirements,
     license="BSD",
