@@ -16,6 +16,7 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     # TODO: put package requirements here
+    'requests>=2.6.2',
 ]
 
 test_requirements = [
