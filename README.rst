@@ -19,6 +19,18 @@ Features
 
 * TODO
 
+Configuration
+-------------
+Create a file named .cloudflare.conf in your home directory. The first line is your API key. The second line is the email address tied to your CloudFlare account.
+
+  .. code-block:: bash
+
+    # ~/.cloudflare.conf
+    8q688bzazqqnhlyflwv88mldw53o62v7e8kzx
+    email@example.com
+
+The API key above is just an example. Please replace it with your own API key.
+
 Usage
 -----
 
