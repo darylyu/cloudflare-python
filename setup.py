@@ -29,7 +29,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Daryl Yu",
     author_email='dyu@fastmail.com',
-    url='https://github.com/darylyu/cloudflare',
+    url='https://github.com/darylyu/cloudflare-python',
     packages=[
         'cloudflare',
     ],
