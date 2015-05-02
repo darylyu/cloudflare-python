@@ -2,6 +2,6 @@
 Usage
 ========
 
-To use CloudFlare - Python Wrappers in a project::
+To use cloudflare-python in a project::
 
     import cloudflare

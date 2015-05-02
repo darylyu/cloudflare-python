@@ -36,8 +36,8 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-CloudFlare - Python Wrappers could always use more documentation, whether as part of the
-official CloudFlare - Python Wrappers docs, in docstrings, or even on the web in blog posts,
+cloudflare-python could always use more documentation, whether as part of the
+official cloudflare-python docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback

@@ -55,7 +55,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'CloudFlare - Python Wrappers'
+project = u'cloudflare-python'
 copyright = u'2015, Daryl Yu'
 
 # The version info for the project you're documenting, acts as replacement
@@ -209,7 +209,7 @@ latex_elements = {
 # [howto/manual]).
 latex_documents = [
     ('index', 'cloudflare.tex',
-     u'CloudFlare - Python Wrappers Documentation',
+     u'cloudflare-python Documentation',
      u'Daryl Yu', 'manual'),
 ]
 
@@ -240,7 +240,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'cloudflare',
-     u'CloudFlare - Python Wrappers Documentation',
+     u'cloudflare-python Documentation',
      [u'Daryl Yu'], 1)
 ]
 
@@ -255,7 +255,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     ('index', 'cloudflare',
-     u'CloudFlare - Python Wrappers Documentation',
+     u'cloudflare-python Documentation',
      u'Daryl Yu',
      'cloudflare',
      'One line description of project.',
