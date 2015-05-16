@@ -16,8 +16,8 @@ def cli():
 @cli.command('cache')
 @click.argument('action')
 @click.argument('zone')
-@click.option('--file', default=None)
-def cache(action, zone, file):
+@click.option('--path', default=None)
+def cache(action, zone, path):
     click.echo("Purging cache of %s" % zone)
 
 def cache(action, zone, file):
