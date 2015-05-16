@@ -83,8 +83,8 @@ Usage: cache
 
   .. code-block:: bash
 
-  # Purge all files in a zone's cache
-  $ cloudflare cache purge example.com
+    # Purge all files in a zone's cache
+    $ cloudflare cache purge example.com
 
-  # Purge a specific file in a zone's cache
-  $ cloudflare cache purge example.com --file=<url>
+    # Purge a specific file in a zone's cache
+    $ cloudflare cache purge example.com --file=<url>
