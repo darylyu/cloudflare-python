@@ -43,12 +43,17 @@ We need this file, because CloudFlare's API wants the zone ID for most requests 
 Usage
 -----
 
-According to CloudFlare's official API documentation, a `zone` is a domain name along with its subdomains and other identities.
-
   .. code-block:: bash
 
     # General form:
     $ cloudflare <noun> <verb> <noun_instance> args...
+
+Usage: zones
+------------
+
+According to CloudFlare's official API documentation, a `zone` is a domain name along with its subdomains and other identities.
+
+  .. code-block:: bash
 
     # Add a site to your CloudFlare account:
     $ cloudflare zone create example.com
@@ -58,6 +63,11 @@ According to CloudFlare's official API documentation, a `zone` is a domain name 
 
     # List the sites tied to your CloudFlare account.
     $ cloudflare zone list
+
+Usage: DNS
+------------
+
+  .. code-block:: bash
 
     # Show the DNS entries for a site
     $ cloudflare dns show example.com
