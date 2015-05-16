@@ -32,5 +32,12 @@ def dns(action, url, value, type):
     click.echo("Updating DNS of %s" % url)
 
 
+@cli.command('zone')
+@click.argument('action')
+@click.argument('zone')
+def zone(action, zone):
+    click.echo("Performing zone command on %s" % zone)
+
+
 if __name__ == '__main__':
     cli()
