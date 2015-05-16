@@ -17,6 +17,7 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     # TODO: put package requirements here
     'requests>=2.6.2',
+    'click>=4.0',
 ]
 
 test_requirements = [
@@ -36,7 +37,7 @@ setup(
     ],
     package_dir={'cloudflare':
                  'cloudflare'},
-    entry_points={'console_scripts': ['cloudflare = cloudflare.cli.main']},
+    entry_points={'console_scripts': ['cloudflare = cloudflare.cloudflare.main']},
     include_package_data=True,
     install_requires=requirements,
     license="BSD",

@@ -87,4 +87,4 @@ Usage: cache
     $ cloudflare cache purge example.com
 
     # Purge a specific file in a zone's cache
-    $ cloudflare cache purge example.com --file=<url>
+    $ cloudflare cache purge example.com --path=<url>
