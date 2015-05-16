@@ -18,6 +18,9 @@ def cli():
 @click.argument('zone')
 @click.option('--file', default=None)
 def cache(action, zone, file):
+    click.echo("Purging cache of %s" % zone)
+
+def cache(action, zone, file):
     click.echo("here")
 
 if __name__ == '__main__':
