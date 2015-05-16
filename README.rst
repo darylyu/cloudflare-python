@@ -77,3 +77,14 @@ Usage: DNS
 
     # Update a DNS entry for a site
     $ cloudflare dns update subdomain.example.com 1.2.3.4 --type=CNAME
+
+Usage: cache
+------------
+
+  .. code-block:: bash
+
+  # Purge all files in a zone's cache
+  $ cloudflare cache purge example.com
+
+  # Purge a specific file in a zone's cache
+  $ cloudflare cache purge example.com --file=<url>
