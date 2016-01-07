@@ -17,28 +17,17 @@ cloudflare-python provides a CLI and Python wrappers for CloudFlare's API.
 
 Configuration
 -------------
-We need to create a configuration file the first time you use this.
 
-  .. code-block:: bash
-  $ cloudflare config
+This assumes that you saved your configuration in ~/.cloudflare.jsonl
 
-This asks you for the email address and API key associated with your CloudFlare account.
+It should contain a single line JSON with keys `email` and `api_key`.
 
-It then creates a file named .cloudflare.yaml in your home directory. The first line is your API key. The second line is the email address tied to your CloudFlare account.
+The key `email` is the email address tied to your CloudFlare account.
 
-  .. code-block:: yaml
-     ---
-     email: email@example.com
-     api_key: 8q688bzazqqnhlyflwv88mldw53o62v7e8kzx
+Your CloudFlare API key can be found here: https://www.cloudflare.com/a/account/my-account
 
-     zones:
-     - name: example1.com
-       id: 1eb3b3756c4180adeba44e1fef92981r7
+Example: `{"email": "john@example.com", "api_key": "21d2f4a18141b891256400d40f289748f1a2b"}`
 
-     - name: example2 .com
-       id: 0e23f3756c464641eba44e1fef92981rz
-
-We need this file, because CloudFlare's API wants the zone ID for most requests and it would be expensive to fetch it every time.
 
 Usage
 -----
