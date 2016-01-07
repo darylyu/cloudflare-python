@@ -26,7 +26,11 @@ The key `email` is the email address tied to your CloudFlare account.
 
 Your CloudFlare API key can be found here: https://www.cloudflare.com/a/account/my-account
 
-Example: `{"email": "john@example.com", "api_key": "21d2f4a18141b891256400d40f289748f1a2b"}`
+Example:
+
+    .. code-block:: javascript
+    
+      {"email": "john@example.com", "api_key": "21d2f4a18141b891256400d40f289748f1a2b"}
 
 
 Usage
