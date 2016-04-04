@@ -3,6 +3,7 @@ import json
 
 from .config import email, api_key
 from .serializers import ZoneSerializer
+from .utils import get_site_id
 
 import requests
 DEFAULT_API_HOST = 'https://api.cloudflare.com/client/v4'
@@ -54,3 +55,14 @@ class CloudFlareClient(object):
         serializer = ZoneSerializer(response)
         data = serializer.data
         return data
+
+    def purge_cache(self, url):
+        sites_and_ids =  self.get_zones_and_internal_ids()
+        site_id = get_site_id(url, sites_and_ids)
+        end_point = '/zones/%s/purge_cache' % site_id
+
+        data = {}
+        data['purge_everything'] = True
+        response = self.__delete__(end_point, data=json.dumps(data))
+        print response.text
+        return response
