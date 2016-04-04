@@ -8,5 +8,8 @@ def get_site_id(domain_name, sites):
     This function will return the CloudFlare ID
     of the given domain name.
     '''
-    site_id = filter(lambda x: x['name'] == domain_name, sites)
+    site_id = None
+    match = filter(lambda x: x['name'] == domain_name, sites)
+    if match:
+        site_id = match[0]['id']
     return site_id
