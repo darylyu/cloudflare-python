@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import json
+
 from .config import email, api_key
 from .serializers import ZoneSerializer
 
@@ -26,6 +28,13 @@ class CloudFlareClient(object):
     def __get__(self, end_point, query_params={}):
         full_url = '%s%s' % (self.api_host, end_point)
         response = requests.get(full_url, headers=self.headers)
+        return response
+
+    def __delete__(self, end_point, data={}):
+        full_url = '%s%s' % (self.api_host, end_point)
+        print data
+        print full_url
+        response = requests.delete(full_url, headers=self.headers, data=data)
         return response
 
     def get_zones_and_internal_ids(self):
