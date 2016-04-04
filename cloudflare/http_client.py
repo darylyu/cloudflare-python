@@ -28,6 +28,16 @@ class CloudFlareClient(object):
         response = requests.get(full_url, headers=self.headers)
         return response
 
+    def get_zones_and_internal_ids(self):
+        # This does not directly map to the /zones end point. We use this
+        # mainly for the site IDs, because the other API calls use the site
+        # ID instead of the domain name.
+        end_point = '/zones'
+        response = self.__get__(end_point)
+        serializer = ZoneSerializer(response)
+        data = serializer.get_basic_info()
+        return data
+
     def list_zones(self):
         # https://api.cloudflare.com/#zone-list-zones
         end_point = '/zones'
