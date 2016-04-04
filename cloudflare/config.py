@@ -11,3 +11,9 @@ class JSONConfigReader(object):
                 auth_pair = json.loads(line)
                 self.email = auth_pair.get('email')
                 self.api_key = auth_pair.get('api_key')
+
+config_reader = JSONConfigReader()
+config_reader.read()
+
+email = config_reader.email
+key = config_reader.key
