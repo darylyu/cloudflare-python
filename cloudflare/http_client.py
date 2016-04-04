@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from .config import email, api_key
+from .serializers import ZoneSerializer
 
 import requests
 DEFAULT_API_HOST = 'https://api.cloudflare.com/client/v4'
@@ -31,4 +32,6 @@ class CloudFlareClient(object):
         # https://api.cloudflare.com/#zone-list-zones
         end_point = '/zones'
         response = self.__get__(end_point)
-        return response
+        serializer = ZoneSerializer(response)
+        data = serializer.data
+        return data
