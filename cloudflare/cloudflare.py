@@ -3,6 +3,10 @@
 
 import click
 
+import caches
+
+from http_client import CloudFlareClient
+
 
 @click.group()
 @click.version_option(prog_name='cloudflare-python', version='0.0.1')
@@ -14,13 +18,13 @@ def cli():
     Fork the repo at https://github.com/darylyu/cloudflare-python
     """
 
-
 @cli.command('cache')
 @click.argument('action')
 @click.argument('zone')
 @click.option('--path', default=None)
 def cache(action, zone, path):
-    click.echo("Purging cache of %s" % zone)
+    if action == 'purge':
+        caches.purge(zone)
 
 
 @cli.command('dns')
