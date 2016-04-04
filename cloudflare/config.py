@@ -16,4 +16,4 @@ config_reader = JSONConfigReader()
 config_reader.read()
 
 email = config_reader.email
-key = config_reader.key
+api_key = config_reader.api_key
