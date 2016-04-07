@@ -26,7 +26,7 @@ test_requirements = [
 
 setup(
     name='cloudflare',
-    version='0.0.1',
+    version='0.0.2',
     description="STILL UNDER DEVELOPMENT! Provides a CLI and Python wrappers for CloudFlare's REST API",
     long_description=readme + '\n\n' + history,
     author="Daryl Yu",
