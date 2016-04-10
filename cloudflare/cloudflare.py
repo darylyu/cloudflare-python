@@ -21,12 +21,22 @@ def cli():
 @cli.command('cache')
 @click.argument('action')
 @click.argument('zone')
-@click.option('--path', default=None)
+@click.option('--path', default=None, multiple=True)
 def cache(action, zone, path):
-    if action == 'purge':
+    # assigning path to paths so it's not too confusing
+    # the var name path is retained since we allow multiple --path flags
+    paths = path
+    response = ''
+    if action == 'purge' and paths:
+        click.echo('Purging the following cached files:')
+        for p in paths:
+            click.echo('%s/%s' % (zone, p))
+        response = caches.purge_files(zone, paths)
+
+    elif action == 'purge':
         click.echo('Purging cache of %s' % zone)
         response = caches.purge(zone)
-        click.echo(response)
+    click.echo(response)
 
 
 @cli.command('dns')

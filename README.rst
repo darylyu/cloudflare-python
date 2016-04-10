@@ -29,7 +29,7 @@ Your CloudFlare API key can be found here: https://www.cloudflare.com/a/account/
 Example:
 
     .. code-block:: javascript
-    
+
       {"email": "john@example.com", "api_key": "21d2f4a18141b891256400d40f289748f1a2b"}
 
 
@@ -80,4 +80,7 @@ Usage: cache
     $ cloudflare cache purge example.com
 
     # Purge a specific file in a zone's cache
-    $ cloudflare cache purge example.com --path=<url>
+    $ cloudflare cache purge example.com --path=favicon.ico
+
+    # It is also possible to purge multiple files
+    $ cloudflare cache purge example.com --path=favicon.ico --path=index.html

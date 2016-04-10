@@ -54,12 +54,15 @@ class CloudFlareClient(object):
         data = serializer.data
         return data
 
-    def purge_cache(self, url):
+    def purge_cache(self, url, paths):
         sites_and_ids =  self.get_zones_and_internal_ids()
         site_id = get_site_id(url, sites_and_ids)
         end_point = '/zones/%s/purge_cache' % site_id
 
         data = {}
-        data['purge_everything'] = True
+        if paths:
+            data['files'] = paths
+        else:
+            data['purge_everything'] = True
         response = self.__delete__(end_point, data=json.dumps(data))
         return response.json()
