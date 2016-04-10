@@ -24,7 +24,9 @@ def cli():
 @click.option('--path', default=None)
 def cache(action, zone, path):
     if action == 'purge':
-        caches.purge(zone)
+        click.echo('Purging cache of %s' % zone)
+        response = caches.purge(zone)
+        click.echo(response)
 
 
 @cli.command('dns')

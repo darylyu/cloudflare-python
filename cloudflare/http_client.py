@@ -33,8 +33,6 @@ class CloudFlareClient(object):
 
     def __delete__(self, end_point, data={}):
         full_url = '%s%s' % (self.api_host, end_point)
-        print data
-        print full_url
         response = requests.delete(full_url, headers=self.headers, data=data)
         return response
 
@@ -64,5 +62,4 @@ class CloudFlareClient(object):
         data = {}
         data['purge_everything'] = True
         response = self.__delete__(end_point, data=json.dumps(data))
-        print response.text
-        return response
+        return response.json()
