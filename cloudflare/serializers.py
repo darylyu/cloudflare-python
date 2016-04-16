@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class ZoneSerializer(object):
 
     def __init__(self, http_response):

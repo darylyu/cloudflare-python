@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def get_site_id(domain_name, sites):
     '''
     Accepts a domain name and a list of sites.
