@@ -1,11 +1,8 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-
 import click
 
 import caches
-
-from http_client import CloudFlareClient
 
 
 @click.group()
@@ -17,6 +14,7 @@ def cli():
 
     Fork the repo at https://github.com/darylyu/cloudflare-python
     """
+
 
 @cli.command('cache')
 @click.argument('action')
