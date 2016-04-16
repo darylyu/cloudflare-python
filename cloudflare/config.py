@@ -2,6 +2,7 @@
 import json
 import os
 
+
 class JSONConfigReader(object):
 
     def read(self, config_path="~/.cloudflare.jsonl"):

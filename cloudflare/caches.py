@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import requests
-
 from .http_client import CloudFlareClient
 
 

@@ -13,7 +13,6 @@ class ZoneSerializer(object):
         return human_readable
 
     def get_basic_info(self):
-        human_readable = ''
         zones = self.data
 
         # return a list of lightweight zones
