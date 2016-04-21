@@ -67,3 +67,12 @@ class CloudFlareClient(object):
             data['purge_everything'] = True
         response = self.__delete__(end_point, data=json.dumps(data))
         return response.json()
+
+    def get_development_mode(self, zone):
+        pass
+
+    def enable_development_mode(self, zone):
+        pass
+
+    def disable_development_mode(self, zone):
+        pass
