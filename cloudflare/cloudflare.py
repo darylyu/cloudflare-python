@@ -3,6 +3,7 @@
 import click
 
 import caches
+import development_mode
 
 
 @click.group()
@@ -35,6 +36,19 @@ def cache(action, zone, path):
         click.echo('Purging cache of %s' % zone)
         response = caches.purge(zone)
     click.echo(response)
+
+
+@cli.command('dev_mode')
+@click.argument('action')
+@click.argument('zone')
+def dev_mode(action, zone):
+    if action == 'get':
+        click.echo('Dev mode for %s: ' % zone)
+        response = development_mode.get(zone)
+    elif action == 'disable':
+        response = development_mode.disable(zone)
+    elif action == 'enable':
+        response = development_mode.enable(zone)
 
 
 @cli.command('dns')
